@@ -1,0 +1,8 @@
+robotframework==5.0.1
+robotframework-difflibrary==0.1.0
+robotframework-eyes==1.5.9
+robotframework-imaplibrary
+robotframework-selenium2library
+robotframework-seleniumlibrary==6.0.0
+robotframework-datadriver==1.9.0
+selenium==4.2.0

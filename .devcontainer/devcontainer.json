@@ -1,0 +1,16 @@
+{
+	"name": "nreg application",
+	"dockerComposeFile": ["../runner/docker-compose.yml", "./docker-compose.override.yml"],
+	"service": "robot-runner",
+    "workspaceFolder": "/home/robot/nreg",
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+			"atlassian.atlascode",
+			"ms-python.python",
+			"eamodio.gitlens"
+		]
+	  }
+	},
+	"remoteUser": "robot"
+}

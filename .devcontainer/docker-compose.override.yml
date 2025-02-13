@@ -1,0 +1,6 @@
+version: "2.1"
+
+services:
+  selenium:
+    ports:
+      - "5001:4444"

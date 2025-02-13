@@ -1,0 +1,31 @@
+version: "2.1"
+services:
+  selenium:
+    image: selenium/hub:4.12.1-20230912
+  chrome:
+    image: selenium/node-chrome:116.0-20230912
+    deploy:
+      replicas: 2
+    user: 1000:1000
+    environment:
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SE_EVENT_BUS_HOST=selenium
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_SESSION_TIMEOUT=600
+      - VNC_NO_PASSWORD=1
+    volumes:
+      - ..:/home/robot/nreg
+    depends_on:
+      - "selenium"
+    shm_size: "4gb"
+  robot-runner:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    user: 1000:1000
+    tty: true
+    working_dir: /home/robot/nreg
+    volumes:
+      - ..:/home/robot/nreg
