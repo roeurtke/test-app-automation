@@ -1,8 +1,16 @@
-robotframework==5.0.1
-robotframework-difflibrary==0.1.0
-robotframework-eyes==1.5.9
-robotframework-imaplibrary
-robotframework-selenium2library
-robotframework-seleniumlibrary==6.0.0
+PyYAML==6.0.1
+robotframework-appiumlibrary==2.0.0
+robotframework-archivelibrary==0.4.2
+robotframework-csvlibrary==0.0.5
+robotframework-datadriver[XLS]==1.9.0
 robotframework-datadriver==1.9.0
-selenium==4.2.0
+robotframework-difflibrary==0.1.0
+robotframework-doctestlibrary==0.18.1
+robotframework-eyes @ git+https://github.com/DGCarramona/RobotEyes.git@master
+robotframework-imaplibrary2==0.4.6 
+robotframework-seleniumtestability==2.1.0
+robotframework-SikuliLibrary==2.0.3
+robotframework-sshlibrary==3.8.0
+robotframework==6.1.1
+rpaframework==27.1.0
+watchui==2.0.13
