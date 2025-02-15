@@ -47,7 +47,7 @@ I connected to application with user: "${username}" and password: "${password}"
 the home page of "MSS Clinic Web Center" will display
     [Documentation]    Display the home of after login success.
     Wait Until Element Is Visible    id=navbarSupportedContent
-    Page Should Contain Element    xpath=//*[contains(text(),'General information')]
-    Page Should Contain Element    xpath=//*[contains(text(),'Para Clinic')]
-    Page Should Contain Element    xpath=//*[contains(text(),'Clinic Chart')]
-    Page Should Contain Element    xpath=//*[contains(text(),'patient Last 6 months')]
+    ${section}=    Create List    GENERAL INFORMATION    PARA CLINIC    CLINIC CHART    PATIENT LAST 6 MONTHS
+    FOR    ${sections}    IN    @{section}
+        Page Should Contain Element    //*[translate(text(), 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ') = "${sections}"]
+    END
