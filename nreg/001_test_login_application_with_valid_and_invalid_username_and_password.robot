@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    RobotEyes
-Resource    ../resources/global_variable.resource
 Resource    ../resources/login.resource
 
 *** Variables ***
