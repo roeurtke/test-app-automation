@@ -1,7 +1,7 @@
 from selenium import webdriver
 import os
 
-class browser_profile(object):
+class BrowserProfile(object):
     @staticmethod
     def create_ff_profile(path):
         fp = webdriver.FirefoxProfile(os.path.realpath(os.path.dirname(__file__)) + os.path.sep + "selenium_profile")

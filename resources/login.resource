@@ -51,3 +51,8 @@ the home page of "MSS Clinic Web Center" will display
     FOR    ${sections}    IN    @{section}
         Page Should Contain Element    //*[translate(text(), 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ') = "${sections}"]
     END
+
+the error message: "${error}" is displayed under the "USERNAME" textbox
+    [Documentation]    Verify error message of login with invalid username or password.
+    Wait Until Element Is Visible    xpath=//span[@class='invalid-feedback']
+    Page Should Contain    ${error}
