@@ -19,7 +19,7 @@ ${images_dir}    ${expected_result_folder}/visual_images/compared
 002 Login MSS Clinic Web Center application with invalid user or password
     [Tags]    002
     [Documentation]    Verify the error when login with invalid user or password.
-    ${values}=    Create Dictionary    test=12345678    socheatha=123456
+    ${values}=    Create Dictionary    test=12345678    socheatha=123456    test1=123456
     FOR    ${key}    IN    @{values}
         Given I connected to application with user: "${key}" and password: "${values}[${key}]"
         Then the error message: "These credentials do not match our records." is displayed under the "USERNAME" textbox
